@@ -1,0 +1,47 @@
+.container{
+    padding-top: 15px;
+}
+.card{
+    margin-top: 50px;
+    font-family: monospace;
+    font-weight: 600
+}
+.button{
+    text-align: right
+}
+
+.panel{
+    border: 1px solid #343a40;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+.panel-heading{
+    background-color: #343a40;
+    color: aliceblue;
+    padding: 5px;
+}
+.panel-title{
+    font-size: 22px
+}
+.panel-body{
+    padding: 10px;
+    font-size: 17px;
+}
+.panel-footer{
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+.panel-footer p{
+    margin-right: 10px;
+}
+.panel-footer strong{
+    margin-right: 3px;
+    font-weight: bold
+}
+
+.msg{
+    margin-top: 50px;
+    font-family: monospace
+}

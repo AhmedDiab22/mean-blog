@@ -1,0 +1,22 @@
+.jumbotron{
+    margin-top: 15px
+}
+.card{
+    margin-bottom: 10px;
+    padding: 15px 
+}
+img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 10px auto;
+}
+a{
+    color: #fff !important; 
+}
+a.btn-default{
+    color: #000 !important;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}

@@ -1,0 +1,63 @@
+<div class="container">
+    <h1 class="page-header">
+        Register Page
+    </h1>
+    <hr>
+    <form #form="ngForm" (ngSubmit)="onRegister(form.value)">
+        <h2 class="f2-light mb-4">
+            Create your personal account *
+        </h2>
+        <div class="form-group">
+            <label for="">Username</label>
+            <input type="trxt" class="form-control" placeholder="Username" 
+            autocomplete="off" name="username" [pattern]="namePattern" #name="ngModel" ngModel required minlength="3" maxlength="15">
+            <ul class="help-block text-danger" *ngIf="name.invalid && name.touched "> 
+                <li *ngIf="name.errors?.required" >
+                    Username is required*
+                </li>
+                <li *ngIf="name.errors?.pattern"> 
+                    User must be contain any chars and numbers and min chars at least 8 chars and max chars 30 chars
+                </li> 
+            </ul>
+        </div>
+        <div class="form-group">
+            <label for="">Email</label>
+            <input type="email" class="form-control" placeholder="Email"
+            autocomplete="off" name="email" #email="ngModel" ngModel required email minlength="5" maxlength="30">
+            <ul class="help-block text-danger" *ngIf="email.invalid && email.touched"> 
+                <li *ngIf="email.errors?.required">
+                    Email is required*
+                </li>
+                <li *ngIf="email.errors?.email">
+                    Example@yahoo.com
+                </li>
+                <li *ngIf="email.errors?.minlength || name.errors?.maxlength">
+                    Minchars : 5 and maxchars : 30
+                </li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label for="">Password</label>
+            <input type="password" class="form-control" [pattern]="passowrdPattern" placeholder="Password"  autocomplete="off" name="password" #password="ngModel" ngModel required>
+            <ul class="help-block text-danger" *ngIf="password.invalid && password.touched"> 
+              <li *ngIf="password.errors.required">
+                    password is required*
+                </li>
+              <li *ngIf="password.errors?.pattern"> 
+                    password must be contain any chars and numbers and min chars at least 8 chars and max chars 30 chars and special chars
+                </li>
+            </ul> 
+        </div>
+        <div class="form-group">
+            <label for="">Confirm Password</label>
+            <input type="password" class="form-control" placeholder="Confirm Password"
+            autocomplete="off" name="confirm" #confirm="ngModel" ngModel required>
+            <ul class="help-block text-danger" *ngIf="confirm.invalid && confirm.touched"> 
+              <li *ngIf="confirm.errors.required">
+                confirm Password is required*
+                </li>
+            </ul> 
+        </div>
+        <input type="submit" [disabled]="form.invalid || confirm.value !== password.value" class="btn btn-primary" value="Submit" />
+    </form>
+</div>

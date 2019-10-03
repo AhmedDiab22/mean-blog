@@ -1,0 +1,73 @@
+.container{
+    padding-top: 30px;
+}
+form{
+    width: 310px;
+    margin: 90px auto 10px;
+    z-index: 9999;
+}
+.auth-form-body{
+    position: relative;
+    border: 1px solid #f00;
+    padding: 50px 20px 20px;
+    background-color: rgb(255, 255, 255);
+    font-size: 14px;
+    border-width: 1px 1px 1px;
+    border-style: solid solid solid solid;
+    border-color: rgb(216, 222, 226) rgb(216, 222, 226) rgb(216, 222, 226);
+    border-image: initial;
+    border-radius: 0px 0px 3px 3px;
+}
+img{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: -49px;
+    left: 31%;
+    background-color: #fff;
+    border-radius: 20%;
+    padding: 4px;
+    border: 1px solid #b6dcfe;
+
+}
+input{
+    margin: 5px 0 0px;
+    padding: 6px 8px
+}
+.btn-block {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.btn {
+    margin-top: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 7px;
+}
+label {
+    font-weight: 600;
+    font-size: 12px
+}
+label a {
+    float: right;
+    color: #007bff;
+    cursor: pointer;
+}
+.create-account-callout {
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(216, 222, 226);
+    border-image: initial;
+    border-radius: 5px;
+    padding: 15px 20px;
+    width: 310px;
+    margin: auto;
+    font-size: 14px
+}
+p a{
+    color: #007bff;
+    cursor: pointer;
+}

@@ -1,0 +1,39 @@
+<div class="container">
+    <h1 class="page-header">
+      Delete Blog
+    </h1>
+    <hr>
+  <div class="row">
+    <div class="col-6">
+        <div class="card text-left">
+            <div class="card-body">
+              <h4 class="card-title">Confirm</h4>
+              <hr>
+              <p class="card-text">are you sure you would like to delete this blog !!</p>
+              <hr>
+            <div class="button">
+              <button type="button" class="btn btn-danger" (click)="deleteBlog()">Yes</button> 
+              <button type="button" class="btn btn-info ml-1">No</button>
+            </div>
+            </div>
+          </div>
+    </div>
+    <div class="col-6" *ngIf="proccess">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{title}}</h3>
+            </div>
+            <div class="panel-body">
+              {{body}}
+            </div>
+            <div class="panel-footer">
+              <strong>Posted by:</strong>{{createdBy}}
+              <br>
+              <strong>Date:</strong> {{createdAt | date : 'MMM dd, yyyy'}}
+        </div>
+    </div>
+  </div>
+  <div class="col-6 msg text-danger" *ngIf="showMsg">
+      <h2>Posted Deleted Successfully !!</h2>
+</div>
+</div>
